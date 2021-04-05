@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>文件查看</title>
+</head>
+<body background="https://api.qqsuu.cn/api/bing">
+    <center>
+
+    <form method="post" action="" enctype="multipart/form-data" id="form2" runat="server" target="_blank">
+    {% csrf_token %}
+       <h1 style="font-family:arial;color:#5e366d;font-size:40px;">JN文件上传</h1><small style="font-size:20px;">jn_test</small><br/><br/>
+       请选择上传文件：<br/><br/>
+       <input type="file" name="myfile"><br/><br/>
+       <input type="submit" value="上传" style="font-size:20px;">
+    </form></center>
+
+<br><br><br><br>
+
+
+<form id="form2" runat="server" target="_blank">
+   <h1 style="font-family:arial;color:yellow;font-size:40px;"><center>JN文件下载</center></h1><small><center>点击下载</center></small><br>
+   <ul style="font-size:20px;">
+   <center>{{file_list|safe}}</center>
+   </ul>
+</form>
+</body>
+
+</html>
